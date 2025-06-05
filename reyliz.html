@@ -20,9 +20,9 @@
         <nav>
           <ul>
             <li><a href="#">Inicio</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Ventajas</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contactar">Contacto</a></li>
           </ul>
         </nav>
       </div>
@@ -84,48 +84,117 @@
       </div>
     </div>
 
-    <section class="products container">
+    <section id="productos" class="productos-destacados">
       <h2>Productos Destacados</h2>
-      <div class="product-list">
-        <div class="product">
-          <img
-            src="https://via.placeholder.com/250x150?text=Producto+1"
-            alt="Producto 1"
-          />
-          <h3>Tuberías de Acero Inoxidable</h3>
-          <p>Alta resistencia y durabilidad para todo tipo de industrias.</p>
+      <div class="producto-horizontal">
+        <div class="producto-imagen">
+          <img src="assets/bobinas.jpg" alt="Bobinas de acero" />
         </div>
-        <div class="product">
-          <img
-            src="https://via.placeholder.com/250x150?text=Producto+2"
-            alt="Producto 2"
-          />
-          <h3>Accesorios y Conexiones</h3>
-          <p>Soluciones precisas para montaje y mantenimiento.</p>
-        </div>
-        <div class="product">
-          <img
-            src="https://via.placeholder.com/250x150?text=Producto+3"
-            alt="Producto 3"
-          />
-          <h3>Equipos Especializados</h3>
-          <p>Diseño y fabricación a medida según necesidad.</p>
+        <div class="producto-info">
+          <h3>Bobinas</h3>
+          <p>Laminado en frío, laminado en caliente y galvanizado.</p>
         </div>
       </div>
-    </section>
 
-    <section class="advantages container">
-      <h2>¿Por qué elegir ReyLiz?</h2>
-      <div class="adv-list">
-        <div class="advantage">Productos certificados de alta calidad.</div>
-        <div class="advantage">Experiencia y respaldo en la industria.</div>
-        <div class="advantage">Atención personalizada y rápida.</div>
+      <div class="producto-horizontal">
+        <div class="producto-imagen">
+          <img src="assets/perfiles.jpg" alt="Perfiles de acero" />
+        </div>
+        <div class="producto-info">
+          <h3>Perfiles</h3>
+          <p>Perfiles cerrados: Cuadrados, rectángulos y tubos.</p>
+          <p>Perfiles abiertos: Canales, costaneras, ángulos.</p>
+          <p>
+            Perfiles estructural galvanizado: Perfil C, perfil U, perfil Omega.
+          </p>
+          <p>Tabiques: galvanizados, montante, canal, esquinero cañerías.</p>
+        </div>
+      </div>
+
+      <div class="producto-horizontal">
+        <div class="producto-imagen">
+          <img src="assets/laminas.jpg" alt="Perfiles de acero" />
+        </div>
+        <div class="producto-info">
+          <h3>Planchas</h3>
+          <p>
+            Diamantado, laminado en frío, laminado en caliente, galvanizados y
+            plancha gruesa.
+          </p>
+        </div>
+      </div>
+
+      <div class="producto-horizontal">
+        <div class="producto-imagen">
+          <img
+            src="assets/fierros-de-construccion.jpg"
+            alt="Perfiles de acero"
+          />
+        </div>
+        <div class="producto-info">
+          <h3>Parrillas y Fierro de Construcción</h3>
+          <p>Estriado y liso.</p>
+        </div>
+      </div>
+
+      <div class="producto-horizontal">
+        <div class="producto-imagen">
+          <img
+            src="assets/cubiertas-y-revestimientos.jpg"
+            alt="Perfiles de acero"
+          />
+        </div>
+        <div class="producto-info">
+          <h3>Cubiertas y Revestimientos</h3>
+          <p>Habitacionales e industriales de construcción.</p>
+        </div>
+      </div>
+
+      <div class="producto-horizontal">
+        <div class="producto-imagen">
+          <img src="assets/barras-u1362.png" alt="Perfiles de acero" />
+        </div>
+        <div class="producto-info">
+          <h3>Barra Plana y Pletinas</h3>
+        </div>
+      </div>
+
+      <div class="producto-horizontal">
+        <div class="producto-imagen">
+          <img src="assets/pernos.jpg" alt="Perfiles de acero" />
+        </div>
+        <div class="producto-info">
+          <h3>Pernos y Fijaciones</h3>
+        </div>
+      </div>
+
+      <div class="producto-horizontal">
+        <div class="producto-imagen">
+          <img src="assets/vigas-u1412.png" alt="Perfiles de acero" />
+        </div>
+        <div class="producto-info">
+          <h3>Vigas</h3>
+        </div>
+      </div>
+
+      <h2 id="servicios">Servicios</h2>
+      <div class="producto-horizontal">
+        <div class="producto-imagen">
+          <img src="assets/maestranza.png" alt="Perfiles de acero" />
+        </div>
+        <div class="producto-info">
+          <h3>Maestranza</h3>
+          <p>
+            Corte y Plegado, corte y alisado, flejes, mesa de corte, vigas
+            especiales.
+          </p>
+        </div>
       </div>
     </section>
 
     <section class="contact">
-      <h2>¿Quieres más información?</h2>
-      <p>Contáctanos y recibe asesoría especializada.</p>
+      <h2 id="contactar">¿Quieres más información?</h2>
+      <p>Contáctanos por <a href="form.html">correo</a> o whatsapp y recibe asesoría especializada.</p>
       <button
         class="btn-whatsapp"
         onclick="window.location.href='https://wa.me/56912345678'"
@@ -133,7 +202,6 @@
         <i class="fa-brands fa-whatsapp"></i> WhatsApp
       </button>
     </section>
-
     <footer>&copy; 2025 ReyLiz. Todos los derechos reservados.</footer>
   </body>
 </html>
