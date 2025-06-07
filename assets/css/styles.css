@@ -15,7 +15,6 @@
   --color-hover: #00509e;
 }
 
-
 body {
   background: #000000;
   color: #333;
@@ -27,7 +26,6 @@ a {
   color: #0077cc;
 }
 
-/* Contenedor general */
 .container {
   max-width: 1100px;
   margin: auto;
@@ -48,20 +46,21 @@ header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .logo img {
-  height: 40px; /* o 50px, según lo que necesites */
+  height: 40px;
   width: auto;
 }
 
-nav ul {
+.menu {
   list-style: none;
   display: flex;
   gap: 25px;
 }
 
-nav ul li a {
+.menu li a {
   color: white;
   font-weight: 600;
   padding: 6px 10px;
@@ -69,13 +68,33 @@ nav ul li a {
   border-radius: 4px;
 }
 
-nav ul li a:hover {
+.menu li a:hover {
   background: var(--color-secundario);
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
 }
 
 /* Sección principal */
 .hero {
-  background-image: url('assets/bg_image.png');  
+  background-image: url('../img/bg_image.png');
   height: 70vh;
   color: white;
   display: flex;
@@ -96,7 +115,7 @@ nav ul li a:hover {
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* <- puedes subir o bajar este valor */
+  background: rgba(0, 0, 0, 0.6);
   z-index: 0;
 }
 
@@ -133,6 +152,7 @@ nav ul li a:hover {
   background: var(--color-secundario);
 }
 
+/* Aquí puedes seguir agregando las secciones: about, productos, contacto, etc. */
 /*Sección atención al cliente*/
 .icono{
     font-size: 40px;
@@ -372,31 +392,6 @@ nav ul li a:hover {
   background-color: var(--color-secundario);
 }
 
-@media (max-width: 600px) {
-  .contact-section {
-    padding: 40px 20px;
-  }
-
-  .contact-section .btn-enviar {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .producto-horizontal {
-    flex-direction: column;
-  }
-
-  .producto-imagen, .producto-info {
-    width: 100%;
-  }
-
-  .producto-info {
-    padding: 20px;
-  }
-}
 
 /* Sección ventajas */
 .advantages {
@@ -474,14 +469,30 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
+  .hamburger {
+    display: flex;
+    position: absolute;
+    right: 30px;
   }
 
-  .hero {
+   .menu {
+    display: none;
+    flex-direction: column;
+    background: #000;
+    position: absolute;
+    top: 70px;
+    right: 0px;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+  }
+
+  .menu-toggle:checked + .hamburger + nav .menu {
+    display: flex;
+  }
+
+   .hero {
     padding-left: 20px;
     text-align: center;
     align-items: center;
@@ -495,6 +506,18 @@ footer {
   .advantages .adv-list {
     flex-direction: column;
     align-items: center;
+  }
+
+  .producto-horizontal {
+    flex-direction: column;
+  }
+
+  .producto-imagen, .producto-info {
+    width: 100%;
+  }
+
+  .producto-info {
+    padding: 20px;
   }
 
   .product,
@@ -542,7 +565,17 @@ footer {
     width: 100%;
     text-align: center;
   }
+
+  .contact-section {
+    padding: 40px 20px;
+  }
+
+  .contact-section .btn-enviar {
+    width: 100%;
+    text-align: center;
+  }
 }
+
 
 @media (min-width: 1510px) {
   .about-image img {
@@ -550,12 +583,6 @@ footer {
     object-fit: cover;
   }
 
-  .about-layout {
-    align-items: stretch;
-  }
-}
-
-@media (min-width: 1520px) {
   .about-layout {
     align-items: stretch;
   }
@@ -584,4 +611,3 @@ footer {
     display: block;
   }
 }
-

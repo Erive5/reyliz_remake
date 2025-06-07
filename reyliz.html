@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ReyLiz - Prototipo Página Principal</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/js/script.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -16,9 +17,19 @@
   <body>
     <header>
       <div class="container">
-        <div class="logo"><img src="assets/logopvg.png" alt="logo" /></div>
+        <div class="logo"><img src="assets/img/logopvg.png" alt="logo" /></div>
+        <!-- Menú hamburguesa (checkbox oculto + label) -->
+
+        <!-- Menú hamburguesa -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
         <nav>
-          <ul>
+          <ul class="menu">
             <li><a href="#">Inicio</a></li>
             <li><a href="#productos">Productos</a></li>
             <li><a href="#servicios">Servicios</a></li>
@@ -61,7 +72,10 @@
 
     <div class="about-layout">
       <div class="about-image">
-        <img src="assets/reyliz_cortado.jpg" alt="Planchas de acero ReyLiz" />
+        <img
+          src="assets/img/reyliz_cortado.jpg"
+          alt="Planchas de acero ReyLiz"
+        />
       </div>
       <div class="about-cards">
         <div class="about-card">
@@ -88,7 +102,7 @@
       <h2>Productos Destacados</h2>
       <div class="producto-horizontal">
         <div class="producto-imagen">
-          <img src="assets/bobinas.jpg" alt="Bobinas de acero" />
+          <img src="assets/img/bobinas.jpg" alt="Bobinas de acero" />
         </div>
         <div class="producto-info">
           <h3>Bobinas</h3>
@@ -98,7 +112,7 @@
 
       <div class="producto-horizontal">
         <div class="producto-imagen">
-          <img src="assets/perfiles.jpg" alt="Perfiles de acero" />
+          <img src="assets/img/perfiles.jpg" alt="Perfiles de acero" />
         </div>
         <div class="producto-info">
           <h3>Perfiles</h3>
@@ -113,7 +127,7 @@
 
       <div class="producto-horizontal">
         <div class="producto-imagen">
-          <img src="assets/laminas.jpg" alt="Perfiles de acero" />
+          <img src="assets/img/laminas.jpg" alt="Perfiles de acero" />
         </div>
         <div class="producto-info">
           <h3>Planchas</h3>
@@ -127,7 +141,7 @@
       <div class="producto-horizontal">
         <div class="producto-imagen">
           <img
-            src="assets/fierros-de-construccion.jpg"
+            src="assets/img/fierros-de-construccion.jpg"
             alt="Perfiles de acero"
           />
         </div>
@@ -140,7 +154,7 @@
       <div class="producto-horizontal">
         <div class="producto-imagen">
           <img
-            src="assets/cubiertas-y-revestimientos.jpg"
+            src="assets/img/cubiertas-y-revestimientos.jpg"
             alt="Perfiles de acero"
           />
         </div>
@@ -152,7 +166,7 @@
 
       <div class="producto-horizontal">
         <div class="producto-imagen">
-          <img src="assets/barras-u1362.png" alt="Perfiles de acero" />
+          <img src="assets/img/barras-u1362.png" alt="Perfiles de acero" />
         </div>
         <div class="producto-info">
           <h3>Barra Plana y Pletinas</h3>
@@ -161,7 +175,7 @@
 
       <div class="producto-horizontal">
         <div class="producto-imagen">
-          <img src="assets/pernos.jpg" alt="Perfiles de acero" />
+          <img src="assets/img/pernos.jpg" alt="Perfiles de acero" />
         </div>
         <div class="producto-info">
           <h3>Pernos y Fijaciones</h3>
@@ -170,7 +184,7 @@
 
       <div class="producto-horizontal">
         <div class="producto-imagen">
-          <img src="assets/vigas-u1412.png" alt="Perfiles de acero" />
+          <img src="assets/img/vigas-u1412.png" alt="Perfiles de acero" />
         </div>
         <div class="producto-info">
           <h3>Vigas</h3>
@@ -180,7 +194,7 @@
       <h2 id="servicios">Servicios</h2>
       <div class="producto-horizontal">
         <div class="producto-imagen">
-          <img src="assets/maestranza.png" alt="Perfiles de acero" />
+          <img src="assets/img/maestranza.png" alt="Perfiles de acero" />
         </div>
         <div class="producto-info">
           <h3>Maestranza</h3>
@@ -193,11 +207,17 @@
     </section>
 
     <section class="contact">
+      <i class="icono fa-solid fa-comment"></i>
       <h2 id="contactar">¿Quieres más información?</h2>
       <p>Contáctanos por correo y recibe asesoría especializada.</p>
     </section>
 
-      <section id="contacto" class="contact-section" action="https://formsubmit.co/erika.mejias@hotmail.es" method="POST">
+    <section
+      id="contacto"
+      class="contact-section"
+      action="https://formsubmit.co/erika.mejias@hotmail.es"
+      method="POST"
+    >
       <h2>Contáctanos</h2>
       <form id="contact-form" action="#" method="POST">
         <div class="form-group">
@@ -215,10 +235,10 @@
         <button type="submit" class="btn-enviar">Enviar mensaje</button>
       </form>
     </section>
-    
+
     <section class="contact">
-    <p>Ó escríbenos directamente</p>
-    <button
+      <p>Ó escríbenos directamente</p>
+      <button
         class="btn-whatsapp"
         onclick="window.location.href='https://wa.me/56912345678'"
       >
